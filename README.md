@@ -1,10 +1,10 @@
-# Fonetipy
+# FonetiPy
 
 
-Fonetica implements the BuscaBR algorithm in Python to match misspelled or ambiguous words at Brazil.
+FonetiPy implements the BuscaBR algorithm in Python to match misspelled or ambiguous words at Brazil. It's fully inspired at [Ruby Fonetica](https://github.com/sobrinho/fonetica)
 
 
-# Usage
+## Usage:
 
 A simple usage is:
 
@@ -26,10 +26,11 @@ fonetipy('Wagner batista')  # show "VM BT"
 fonetipy('Vagner baptista')  # show "VM BT"
 ```
 
-# TestCase 
+## Tests:
 
 Just run:
 
 ```python fonetipy_test.py```
 
 The verbose mode is active by default.
+
