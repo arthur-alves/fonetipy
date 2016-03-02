@@ -43,7 +43,7 @@ class FonetiPy(object):
         """Apply BuscaBr alghoritm on string."""
         string = string.upper()
         # Cedilla correction - unidecode module don't solve this and
-        # replace Ç to C, instead SS. Search for another module
+        # replace Ç to C, instead SS.
         for asc in ("ç", "Ç"):
             if asc in string:
                 string = string.replace(asc, "S")
