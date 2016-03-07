@@ -42,11 +42,12 @@ class FonetiPy(object):
     def apply(self, string):
         """Apply BuscaBr alghoritm on string."""
         string = string.upper()
-        # Cedilla correction - unidecode module don't solve this and
-        # replace Ç to C, instead SS.
+
+        # Cedilla correction:
         for asc in ("ç", "Ç"):
             if asc in string:
-                string = string.replace(asc, "S")
+                regex = re.compile(asc)
+                string = re.sub(regex, "S", string)
 
         string = unidecode(unicode(string)).upper()
         for i in self.__codes:
