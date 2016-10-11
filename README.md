@@ -3,6 +3,13 @@
 
 FonetiPy implements the BuscaBR algorithm in Python to match misspelled or ambiguous words at Brazil. It's fully inspired at [Ruby Fonetica](https://github.com/sobrinho/fonetica)
 
+## Install:
+
+Install via PIP tool:
+
+```python
+pip install fonetipy
+```
 
 ## Usage:
 
