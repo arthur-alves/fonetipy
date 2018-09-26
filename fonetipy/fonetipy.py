@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """This module implement a phonectic buscabr alghoritm for Python."""
-
 import re
 from collections import namedtuple
 from unidecode import unidecode
-
 
 class FonetiPy(object):
     """BuscaBr phonectic alghoritm class."""
@@ -44,12 +42,11 @@ class FonetiPy(object):
         string = string.upper()
 
         # Cedilla correction:
-        for asc in ("ç", "Ç"):
-            if asc in string:
-                regex = re.compile(asc)
-                string = re.sub(regex, "S", string)
+        if "Ç" in string:
+            string = re.sub(re.compile("Ç"), "S", string)
 
-        string = unidecode(unicode(string)).upper()
+        string = unidecode(str(string))
+
         for i in self.__codes:
             string = re.sub(re.compile(i.repl), i.to, string)
 
